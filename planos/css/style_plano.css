@@ -1,0 +1,620 @@
+*{
+    margin:0; padding:0;
+    color:#f2f5f7;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+
+nav{
+    height: 6rem;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    background-color: #000000;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.2);
+
+}
+
+/* Styling Logo*/
+
+.logo{
+    padding: 3vh 3vw;
+    text-align: left;
+    width: 20vw;
+}
+
+.logo img{
+    height: auto;
+    width: 4rem;
+}
+
+/* Styling Navigation Links*/
+
+.nav-links{
+    width: 80vw;
+    display: flex;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    font-weight: 600;
+}
+
+.nav-links li a{
+    margin: 0 0.7vw;
+    text-decoration: none;
+    transition: all ease-in-out 350ms;
+    padding: 10px;
+}
+
+.nav-links li a:hover{
+    color:#000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.nav-links li{
+    position:relative;
+}
+
+.nav-links li a:hover::before{
+    width: 80%;
+}
+
+
+/*Buttons Styling*/
+
+.login-button{
+    padding: 0.6rem 0.8rem;
+    margin-left: 2vw;
+    font-size:1rem;
+    cursor:pointer;
+    background-color: transparent;
+    border:1.5px solid #f2f5f7;
+    border-radius: 2em;
+}
+
+.login-button:hover{
+    color:#fff;
+    background-color: #dd5f24;
+    border:1.5px solid #dd5f24;
+    transition: all ease-in-out 350ms;
+}
+
+/*Navigation Icon Styling*/
+
+.hamburger div{
+    width: 30px;
+    height: 3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburger{
+    display: none;
+}
+
+
+/*Responsive Adding Media Queries*/
+
+@media screen and (max-width: 800px){
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.4s ease;
+    }
+    .nav-links{
+        background: #000000;
+        position: fixed;
+        opacity: 1;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.4s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.4s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.4s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.4s ease 0.4s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.4s ease 0.7s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.4s ease 0.8s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.4s ease 1s;
+        margin: 0;
+    }
+
+    li.fade{
+        opacity: 1;
+    }
+
+    /* Navigation Bar Icon on Click*/
+
+        .toggle .bars1{
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .toggle .bars2{
+            transition: all 0s ease;
+            width: 0;
+        }
+
+        .toggle .bars3{
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+}
+
+
+section {
+    
+    padding-top: 150px;
+    padding-left: 50px;
+    background: linear-gradient( 217deg,
+    rgb(143, 7, 197),
+    rgb(131, 6, 180),
+    rgb(125, 13, 170),
+    rgb(109, 10, 148),
+    rgb(143, 7, 130),
+    rgb(143, 7, 120)
+                          );
+
+
+}
+
+.oferta h1{
+    font-size: 43px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    padding-bottom: 30px;
+    border-color: black;
+    text-align: center;
+}
+.oferta p {
+    padding-top: 10px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.botão {
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-bottom: 25px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.segundo{
+    color: #000000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    background: rgb(177, 132, 214);
+    border-color: #000000;
+    color: #fff;
+    background-image: -webkit-linear-gradient(45deg, #0f5ef1 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #06beec 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    font-size: 15px;
+    
+}
+.segundo:hover{
+    cursor: pointer;
+    color: #000000;
+    background: rgb(88, 88, 221);
+    font-size: 15px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-position: 0;
+}
+.termos{
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+ h6{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.porque{
+    background: #f2f5f7;
+}
+.porque h1{
+    color: #000;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    top: auto;
+    padding-top: 25px;
+}
+aside{
+    text-align: center;
+    padding-top: 30px;
+
+}
+.list{
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-gap: 20px;
+  width:70%;
+  max-width: 800px;
+  padding-bottom: 50px;
+
+}
+.lista1 {
+    font-size: 15px;
+    position: relative;
+    width: 160px;
+    height: 220px;
+    background: rgba(71, 20, 71, 0.452);
+    border-radius: 20px;
+    overflow:hidden;
+    color: #000000;
+    
+}
+
+img {padding-top: 15px;
+    width:100%;
+    height:100%;
+    max-width: 150px;
+    max-height: 90px;
+    border-radius: 29%;
+}
+
+.container{
+    width:1100px;
+    height: 100%;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.container .card{
+    width: 300px;
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
+    background: linear-gradient( 135deg,
+   #ee20d6 0%,
+   #0a2fb6 100%);
+   border-radius: 15px;
+   box-shadow: 2px 5px 15px black;
+   transition: transform 0.3s;
+}
+ .container .card:hover{
+transform: scale(1.050);
+ }
+.container .card .card-title{
+    padding: 30px 20px;
+    border-bottom: 2px solid gray;
+
+}
+.container .card .card-title h2 {
+    font-size: 35px;
+    padding-bottom: 15px;
+    color: yellow;
+
+}
+.container .card .card-title p span {
+    font-size: 40px;
+    padding: 0 5px;
+
+}
+.container .card .card-content ul{
+    padding: 10px 30px;
+    padding-bottom: 20px;
+
+}
+.container .card .card-content ul li {
+    list-style: none;
+    padding: 10px 0;
+}
+.container .card .card-content ul li i {
+    margin-right: 4px;
+    
+
+}
+.container .card .card-content button {
+    width: 120px;
+    padding: 10px 20px;
+    background: rgb(10, 10, 10);
+    color: #000000;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.container .card .card-content button:hover{
+    background: #0d17a7;
+    letter-spacing: 1.2px;
+}
+
+.planos{
+    background: linear-gradient( 135deg,
+   #ad20ee 0%,
+   #4d2ebe 100%);
+}
+.escolha{
+    text-align: center;
+    
+}
+.escolha h2{
+    color:#000;
+    padding-top: 20px;
+    font-size: 32px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+.escolha p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+}
+.container .card .card-content button a {
+    text-decoration: none;
+    color: #fffbfb;
+    font-size: 20px;
+}
+
+
+
+/*RODAPÉ*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+footer{
+    margin-top: auto; /*tenho que ver esse margem*/
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    padding: 50px 0;
+}
+.container-footer{
+    max-width: 100vw;
+    padding: 0 4%;
+    margin: auto;
+}
+.row-footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+}
+.footer-col ul{
+    list-style: none;
+}
+.footer-col ul li{
+    margin: 10px 0;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #cecdcd;
+    padding-left: 10px;
+}
+.footer-col .medias-socias{
+    margin-top: 30px;
+}
+.footer-col .medias-socias a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+}
+.footer-col .medias-socias a i{
+    font-size: 20px;
+}
+
+.footer-col .medias-socias a:hover{
+    color: #4059c9;
+    background-color: white;
+}
+.footer-col .form-sub input{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid #4059c9;
+    color: black;
+    background-color: white;
+}
+.footer-col .form-sub input::placeholder{
+    color: black;
+}
+.footer-col .form-sub button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px; 
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #415aca;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: white;        
+}
+
+/*Responsive Adding Media Queries*/
+
+@media screen and (max-width: 800px){
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.4s ease;
+    }
+    .nav-links{
+        background: #000000;
+        position: fixed;
+        opacity: 1;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.4s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.4s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.4s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.4s ease 0.4s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.4s ease 0.7s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.4s ease 0.8s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.4s ease 1s;
+        margin: 0;
+    }
+
+    li.fade{
+        opacity: 1;
+    }
+
+    /*RESPONSIVO RODAPÉ*/
+    @media (max-width: 800px) {
+        .footer-col{
+            width: 50%;
+            margin-bottom: 30px;
+        }
+    }
+    @media (max-width:600px) {
+        .footer-col{
+            width: 100%;
+        }
+    }
+
+    /* Navigation Bar Icon on Click*/
+
+        .toggle .bars1{
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .toggle .bars2{
+            transition: all 0s ease;
+            width: 0;
+        }
+
+        .toggle .bars3{
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+}
+
+
+.seletor_de_opcoes{
+    background-color: #000000;
+}
+
+
